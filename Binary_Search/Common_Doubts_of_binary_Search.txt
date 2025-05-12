@@ -1,0 +1,17 @@
+Some basic questions and concepts realated to binary search 
+
+Why is it (low <= high) and why not (low <high)
+The search for the element should be ended when there are no elements available in the window(sub-array) so in case of (low <= high), 
+the last iteration when low == high, there is still one element left in the window(sub-array of size:1)
+
+Why is it mid = low + (high -low)/2, why not mid = (high + low)/2:
+In short, it’s just so that, you don't get the famous overflow error, 
+When you add two signed 32-bit integers, you always run the risk of overflow. 
+You can try it yourself with low = 1 and high = Integer.MAX_VALUE. but if you do the above method you won't get it.
+
+Why is it (low = mid+1) and (high = mid-1), why not (low = mid) and (high = mid):
+As we already have processed the element at position: mid, 
+there is no point in including it again in the next iteration in out sub-array, 
+if you do as low = mid and high=mid, when we reach the last condition of low == high, 
+it might go to an infinite loop.
+
