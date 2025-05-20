@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 class Rev_Sorted_Arr{
-    public static Search(int arr[], int target)
+    public static int Search(int arr[], int target)
     {
         int low = 0;
         int high = arr.length -1;
