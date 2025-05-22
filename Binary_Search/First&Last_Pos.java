@@ -46,3 +46,9 @@ class Solution {
 //Seeing sorted array and also finding first (min) and last max() occurence helps us in understnading we can apply binary search here 
 //we can search for first occurence in left half and last occurence in right half
 //(my wrong thinking - if we find target at mid then fist and last occurence both would be mid only but thats totally wrong )
+
+// Here we will need to apply binary search 2 times to find the first and last occurences 
+//first occurence of target (have to search only in left coz its a sorted array)
+//last occurence of target (have to search only in right coz its a sorted array)
+// so in the both the cases first we will compare with mid if its equal to target then that would be occurence if not then in
+//case of first occurence we will search making l=m-1 , but target is greater thn mid then we will move first pointer towards right , same like this we will be seraching in right for last occurences 
