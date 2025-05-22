@@ -21,3 +21,10 @@ public class Solution extends VersionControl {
         return h;
 }
 }
+
+//Intution 
+//Easy binary search problem , so here we need to find first bad code , so if we observe we can apply binary search here 
+//there are n number of number of versions so first we will find the mid and check it is a bad version if its yes , then we will move our last pointer to mid and gaain check do we 
+//any before also if not mid is the ans 
+// if mid is not a bad version thn then we will move our low pointer to right and search in right side 
+//Time complexity O(log n) , space complexity O(1)
