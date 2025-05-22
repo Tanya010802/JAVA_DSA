@@ -5,15 +5,15 @@ class Rev_Sorted_Arr{
     public static int Search(int arr[], int target)
     {
         int low = 0;
-        int high = arr.length -1;
+        int high = arr.length;
         while(low<=high)
         {
-            int mid = low+(high-low) / 2;
+            int mid = low+ (high-low) / 2;
             if(arr[mid]==target)
             {
                 return mid;
             }
-          if (target>arr[mid])
+          if (target<arr[mid])
           {
             low = mid+1; 
           }
